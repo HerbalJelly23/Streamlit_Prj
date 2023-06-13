@@ -213,7 +213,7 @@ st.write(
     '点击按钮以生成波形控制参数，并自动进行分析。在分析完成后，将根据您所选择的生成数据与图像内容进行自动生成。该过程需要较多时间，请耐心等待。')
 if st.button(f'一键生成'):
     # 读取频率数据
-    dataset_freq = pd.read_csv(f'{os.path.dirname(__file__)}\频率表格_Python分析.CSV')
+    dataset_freq = pd.read_csv(f'{os.path.dirname(__file__)}/频率表格_Python分析.CSV')
     # 更改所在目录
     if os.path.exists(data_dir_path):
         os.chdir(data_dir_path)
