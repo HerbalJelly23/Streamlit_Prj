@@ -1,9 +1,8 @@
 requests
 pandas
 numpy
-streamlit==1.11.1
-click==8
+streamlit
 matplotlib
-matplotlib.pyplot
 os
 time
+PIL
