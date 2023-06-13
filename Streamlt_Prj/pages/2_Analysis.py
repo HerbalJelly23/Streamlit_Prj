@@ -42,7 +42,7 @@ else:
     os.chdir(data_dir_path)
 
 # 读取频率数据
-dataset_freq = pd.read_csv(f'{os.path.dirname(__file__)}\频率表格_Python分析.CSV')
+dataset_freq = pd.read_csv(f'{os.path.dirname(__file__)}/频率表格_Python分析.CSV')
 wave_freq_out = [].copy()
 for i in range(12709):
     wave_freq_out.append(float(dataset_freq.iat[i, 0]))
