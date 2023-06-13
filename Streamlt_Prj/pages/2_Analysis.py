@@ -53,14 +53,14 @@ frequency_relative_error = []
 distortion_analysis_list = []
 addr_step_list = []
 step_count_list = []
-with open('distortion_analysis.coe', 'r') as distortion_analysis_file:
+with open(f'{data_dir_path}/distortion_analysis.coe', 'r') as distortion_analysis_file:
     distortion_analysis_file.readline()
     distortion_analysis_file.readline()
     for i in range(12709):
         line_content = distortion_analysis_file.readline()
         distortion_analysis_list.append(float(line_content[0:len(line_content) - 2]))
     distortion_analysis_file.close()
-with open('frequency_error.coe', 'r') as frequency_error_file:
+with open(f'{data_dir_path}/frequency_error.coe', 'r') as frequency_error_file:
     frequency_error_file.readline()
     frequency_error_file.readline()
     for i in range(12709):
@@ -68,7 +68,7 @@ with open('frequency_error.coe', 'r') as frequency_error_file:
         frequency_error.append(float(line_content[0:len(line_content) - 2]))
         frequency_relative_error.append(float(line_content[0:len(line_content) - 2]) / wave_freq_out[i])
     frequency_error_file.close()
-with open('addr_step.coe', 'r') as addr_step_file:
+with open(f'{data_dir_path}/addr_step.coe', 'r') as addr_step_file:
     addr_step_file.readline()
     addr_step_file.readline()
     for i in range(12709):
@@ -78,7 +78,7 @@ with open('addr_step.coe', 'r') as addr_step_file:
         else:
             addr_step_list.append(float(line_content[0:len(line_content) - 2]))
     addr_step_file.close()
-with open('step_count.coe', 'r') as step_count_file:
+with open(f'{data_dir_path}/step_count.coe', 'r') as step_count_file:
     step_count_file.readline()
     step_count_file.readline()
     for i in range(12709):
