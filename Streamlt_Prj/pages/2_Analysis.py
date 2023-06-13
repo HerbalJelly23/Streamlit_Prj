@@ -40,6 +40,7 @@ if os.path.exists(data_dir_path):
 else:
     os.mkdir(data_dir_path)
     os.chdir(data_dir_path)
+data_dir_path = data_dir_path.replace('\\', '/')
 
 # 读取频率数据
 dataset_freq = pd.read_csv(f'{os.path.dirname(__file__)}/频率表格_Python分析.CSV')
