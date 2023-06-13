@@ -3,6 +3,5 @@ pandas
 numpy
 streamlit
 matplotlib
-os
 time
 PIL
