@@ -16,6 +16,26 @@ st.set_page_config(
 st.title('查看分析结果')
 st.caption('本APP由:blue[怕挂科的我，把Python能力点满就对了]提供技术支持')
 
+# 切换目录
+current_path = 'D:\\DDS_param_generator'
+if os.path.exists(current_path):
+    os.chdir(current_path)
+else:
+    os.mkdir(current_path)
+    os.chdir(current_path)
+data_dir_name = st.text_input('请填写您的数据文件夹名称：', 'DDS_dataset')
+col1, col2 = st.columns(2)
+col1.write('您可以为您的文件夹添加:red[后缀]，以便于区分生成的不同数据集：')
+if col2.checkbox('添加日期后缀', value=1):
+    date = time.strftime('_%Y-%m-%d', time.localtime())
+    data_dir_name = data_dir_name + date
+if col2.checkbox('添加时间后缀'):
+    date = time.strftime('_%H-%M-%S', time.localtime())
+    data_dir_name = data_dir_name + date
+data_dir_path = f'{current_path}\{data_dir_name}'
+st.write(f'您当前处于该数据目录中:red[{data_dir_path}]')
+# st.markdown('***')
+
 # 分析原理展示
 st.markdown('***')
 with st.expander('频率误差及波形失真度分析原理'):
@@ -58,25 +78,7 @@ with st.expander('频率误差及波形失真度分析原理'):
 
 st.markdown('***')
 
-# 切换目录
-current_path = 'D:\\DDS_param_generator'
-if os.path.exists(current_path):
-    os.chdir(current_path)
-else:
-    os.mkdir(current_path)
-    os.chdir(current_path)
-data_dir_name = st.text_input('请填写您的数据文件夹名称：', 'DDS_dataset')
-col1, col2 = st.columns(2)
-col1.write('您可以为您的文件夹添加:red[后缀]，以便于区分生成的不同数据集：')
-if col2.checkbox('添加日期后缀', value=1):
-    date = time.strftime('_%Y-%m-%d', time.localtime())
-    data_dir_name = data_dir_name + date
-if col2.checkbox('添加时间后缀'):
-    date = time.strftime('_%H-%M-%S', time.localtime())
-    data_dir_name = data_dir_name + date
-data_dir_path = f'{current_path}\{data_dir_name}'
-st.write(f'您当前处于该数据目录中:red[{data_dir_path}]')
-# st.markdown('***')
+
 # 切换目录
 if os.path.exists(data_dir_path):
     os.chdir(data_dir_path)
