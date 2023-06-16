@@ -80,7 +80,7 @@ st.markdown('***')
 st.subheader(':red[3.]时钟频率[MHz]')
 st.write('请将时钟频率设置为与您所使用的DDS方法的硬件时钟频率一致')
 st.write(':red[FPGA的时钟可能为其系统时钟或由PLL/MMCM控制的时钟，请在确认后进行设定]')
-clk_freq = int(st.number_input('设定时钟频率[MHz]', 125)) * 1000_000
+clk_freq = int(st.number_input('设定时钟频率[MHz]', 10)) * 1000_000
 st.markdown('***')
 
 # 3.频率数据导入
