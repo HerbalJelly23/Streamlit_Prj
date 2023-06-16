@@ -93,10 +93,10 @@ with st.sidebar:
     st.subheader('双参数显示')
     col1, col2 = st.columns(2)
     # col1.write('地址步进值参数显示：')
-    if col1.checkbox('地址步进值', value=1):
+    if col1.checkbox('地址步进值', value=0):
         col1.table(addr_step_list)
     # col2.write('步进计数值参数显示：')
-    if col2.checkbox('步进计数值', value=1):
+    if col2.checkbox('步进计数值', value=0):
         col2.table(step_count_list)
 # st.markdown('***')
 
