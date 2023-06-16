@@ -15,6 +15,48 @@ st.set_page_config(
 
 st.title('查看分析图像')
 
+# 分析原理展示
+st.markdown('***')
+with st.expander('频率误差及波形失真度分析原理'):
+    st.subheader('频率误差及波形失真度分析原理')
+    st.markdown('#### :red[1.]频率误差分析原理')
+    col1, col2 = st.columns(2)
+    col1.markdown(
+        '右边展示公式为:red[频率误差计算公式]，其中$\\delta_{freq}$ 频率失真的相对误差，其乘以$f_{origin}$ 即可得到频率失真的相对误差。')
+    col1.markdown(
+        '该公式中的$N_{AddrStep}$ 和$N_{dataset}$ 即为在[:red[Generate]](https://herbaljelly-dds-generator.streamlit.app/Generate)步骤中生成的双参数，也是双参数控制的DDS方法的核心参数。')
+    col1.markdown(
+        '频率误差分析过程通过将生成的双参数代入该公式中计算，即可得到双参数控制的DDS方法得到的波形的实际频率，通过该公式中和$f_{origin}$ 的比较，'
+        '即可得到频率的绝对误差和相对误差。')
+    col2.markdown(
+        '#### $\\delta_{freq}=\\frac{\\frac{N_{AddrStep}}{T_{clk} \\times N_{StepCount} \\times N_{dataset}}-f_{origin}}{f_{origin}}$')
+    col2.caption('频率误差计算公式')
+    col2.markdown('- $N_{AddrStep}$ 为地址步进参数')
+    col2.markdown('- $T_{clk}$ 为系统时钟周期')
+    col2.markdown('- $N_{dataset}$ 为波形数据个数')
+    col2.markdown('- $f_{origin}$ 为目标频率')
+    col2.markdown('- $\\delta_{freq}$ 为频率失真的相对误差')
+    st.markdown('***')
+    st.markdown('#### :red[2.]波形失真分析原理')
+    col1, col2 = st.columns(2)
+    col1.markdown(
+        '右边展示公式为:red[波形失真度计算公式]，其中$\\sigma_{sine}$ 为波形失真度，其计算公式与标准差计算方法相近。')
+    col1.markdown(
+        '该公式中，我们使用了在[:red[Generate]](https://herbaljelly-dds-generator.streamlit.app/Generate)步骤中生成的双参数控制的DDS方法绘制出的波形的值即$N\\sum_{i=0}^n S_i$。'
+        '而在双参数控制的DDS方法中，生成的波形实际上是由多个方波拟合而成的，而方波面积为$S_i$ ，则可以进行理论计算获取其波形围成的面积，并与实际波形的面积相比较，从而计算得到失真度。')
+    col1.markdown('在计算波形失真度时，我们并未使用:red[THD（总谐波失真）]作为其失真度衡量标准。'
+                  '- 这是由于对于DDS方法，使用条件往往是数字电路经过DAC产生波形，其谐波能量是难以计算的。'
+                  '- 且在更复杂的含有波形幅度挡位调节功能的系统中，THD分析难以具有代表性，计算量也大大提高。'
+                  '- 在此处使用波形面积的差作为失真度即标准差，更加符合DDS方法生成的波形失真度的语义。')
+    col2.markdown(
+        '#### $\\sigma_{sine}=\\frac{\\sqrt{(S_{sin}-\\sum_{i=0}^n S_i)^2}}{S_{sin}}$')
+    col2.caption('波形失真度计算公式')
+    col2.markdown('- $N\\sum_{i=0}^n S_i$ 为一个周期内通过DDS方法生成波形在坐标轴上围成的面积')
+    col2.markdown('- $S_{sin}$ 为一个周期内波形在坐标轴上围成的面积')
+    col2.markdown('- $\\sigma_{sine}$ 为波形失真度（标准差）')
+
+st.markdown('***')
+
 # 切换目录
 current_path = 'D:\\DDS_param_generator'
 if os.path.exists(current_path):
