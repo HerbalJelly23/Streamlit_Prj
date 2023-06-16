@@ -50,11 +50,11 @@ with st.expander('点击以展开双参数控制的DDS方法简要介绍'):
 st.header('参数生成APP使用说明')
 with st.expander('点击以展开参数生成APP使用说明', expanded=1):
     st.subheader(':red[1.]数据生成APP，使用说明：')
-    st.write(':red[(1)]根据:red[Generator]页面的操作步骤提示，分别进行以下步骤确定:red[目录选取]、设定:red[数据深度]、设定:red[时钟频率]、导入:red[频率数据]、设定:red[波形最低分辨率]')
+    st.write(':red[(1)]根据[:red[Generate]](https://herbaljelly-dds-generator.streamlit.app/Generate)页面的操作步骤提示，分别进行以下步骤确定:red[目录选取]、设定:red[数据深度]、设定:red[时钟频率]、导入:red[频率数据]、设定:red[波形最低分辨率]')
     st.write(':red[(2)]完成波形质量相关参数设定中的前置操作后，根据您的需求设定:red[加载数据分析文件]、:red[生成数据文件]、:red[生成分析图像]。这些步骤都是允许客制化的，您也可以不做操作，:red[保持默认]即可')
     st.write(':red[(3)]在完成所有相关参数的设定后，您应该根据:red[侧边栏]显示的内容反复确认您的设定是否正确，并在确认:red[文件生成路径]和您需要生成的:red[参数文件]后点击:red[**一键生成**]')
     st.write(':red[(4)]在看到庆祝的气球放出后，证明生成过程已全部完成，届时您可以根据提示，移步至:red[Analysis]界面查看数据分析图像，并查看相应数据')
-    st.write(':red[(5)]在:red[Analysis]界面，您可以再次对图像展示的内容进行设定，该操作并:red[不会对已生成的数据或图像造成影响]')
+    st.write(':red[(5)]在[:red[Analysis]](https://herbaljelly-dds-generator.streamlit.app/Analysis)界面，您可以再次对图像展示的内容进行设定，该操作并:red[不会对已生成的数据或图像造成影响]')
     st.markdown('***')
     st.subheader(':red[2.]数据生成APP，注意事项：')
     st.write(':red[(1)]程序中出现的问题可能并未被正确排除，欢迎您在使用时进行指出')
