@@ -3,4 +3,4 @@ pandas
 numpy
 streamlit
 matplotlib
-joblib
+joblib==1.2.0
