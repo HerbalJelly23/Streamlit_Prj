@@ -13,7 +13,8 @@ st.set_page_config(
     initial_sidebar_state="auto"  #侧边栏
 )
 
-st.title('查看分析图像')
+st.title('查看分析结果')
+st.caption('本APP由:blue[怕挂科的我，把Python能力点满就对了]提供技术支持')
 
 # 分析原理展示
 st.markdown('***')
