@@ -90,6 +90,7 @@ using_online_freq_dataset = st.checkbox('使用我们为您提供的频率数据
 resolution_1 = 0
 resolution_2 = 0
 resolution_3 = 0
+st.markdown('***')
 if using_online_freq_dataset:
     st.subheader(':red[5.]波形最低分辨率')
     st.write('波形分辨率将对DDS方法生成波形的失真度和频率精度造成较大影响，您可以使用推荐值')
@@ -110,7 +111,7 @@ else:
         st.success('导入成功，您可以继续后续步骤', icon="✅")
         freg_dataset_len = len(dataset_freq)
 
-        freq_range = st.slider('设定第一个分辨率区间', 0, int(dataset_freq.iloc[freg_dataset_len - 1, 0]),
+        freq_range = st.slider('设定您的频率区间', 0, int(dataset_freq.iloc[freg_dataset_len - 1, 0]),
                                (int(dataset_freq.iloc[freg_dataset_len - 1, 0] / 100),
                                 int(dataset_freq.iloc[freg_dataset_len - 1, 0] / 10)))
 
