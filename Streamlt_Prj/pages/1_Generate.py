@@ -90,8 +90,9 @@ using_online_freq_dataset = st.checkbox('使用我们为您提供的频率数据
 resolution_1 = 0
 resolution_2 = 0
 resolution_3 = 0
-st.markdown('***')
+
 if using_online_freq_dataset:
+    st.markdown('***')
     st.subheader(':red[5.]波形最低分辨率')
     st.write('波形分辨率将对DDS方法生成波形的失真度和频率精度造成较大影响，您可以使用推荐值')
     st.write(':red[推荐值根据您的数据深度推算，为了保证波形的精度，我们强烈建议您使用推荐值]')
@@ -103,7 +104,7 @@ if using_online_freq_dataset:
         resolution_3 = int(
             st.slider('设定频率1MHz~10MHz处的波形分辨率：', 2, int(2 ** N_depth / 32), int(2 ** N_depth / 128)))
 else:
-    uploaded_file = st.file_uploader("Choose a file")
+    uploaded_file = st.file_uploader("请添加您的频率CSV文件")
     if uploaded_file is not None:
         dataset_freq = pd.read_csv(uploaded_file)
         st.write('请确认您的频率数据正确：')
