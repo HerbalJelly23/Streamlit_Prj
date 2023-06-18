@@ -149,6 +149,7 @@ with st.sidebar:
 tab_1, tab_2, tab_3 = st.tabs(["频率失真误差", "频率失真相对误差", "波形失真度分析"])
 freq_range_dict = {'0Hz': 0, '0.1Hz': 0, '1Hz': 9, '10Hz': 18, '100Hz': 108, '1kHz': 1008, '10kHz': 1908,
                    '100kHz': 10908, '1MHz': 11808, '10MHz': 12708}
+st.subheader('频率误差及波形失真度分析图像')
 with tab_1:
     st.subheader('频率失真误差')
     col2, col1 = st.columns(2)
