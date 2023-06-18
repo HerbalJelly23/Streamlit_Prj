@@ -31,6 +31,7 @@ with st.expander('Shannon Wiener Curve', expanded=1):
     st.write('')
 
     # A1-1的香农曲线
+    st.markdown('***')
     chart_data1 = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/shannon curve1.csv', usecols=[1, 2, 3]))
     show1 = st.checkbox(
@@ -41,6 +42,7 @@ with st.expander('Shannon Wiener Curve', expanded=1):
         chart_data1
 
     # A4-1的香农曲线
+    st.markdown('***')
     chart_data2 = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/shannon curve2.csv', usecols=[1, 2, 3]))
     show2 = st.checkbox(
@@ -51,6 +53,7 @@ with st.expander('Shannon Wiener Curve', expanded=1):
         chart_data2
 
     # A9-Z的香农曲线
+    st.markdown('***')
     chart_data3 = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/shannon curve3.csv', usecols=[1, 2, 3]))
     show3 = st.checkbox(
@@ -61,6 +64,7 @@ with st.expander('Shannon Wiener Curve', expanded=1):
         chart_data3
 
     # A11的香农曲线
+    st.markdown('***')
     chart_data4 = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/shannon curve4.csv', usecols=[1, 2, 3]))
     show4 = st.checkbox(
@@ -71,6 +75,7 @@ with st.expander('Shannon Wiener Curve', expanded=1):
         chart_data4
 
     # A15的香农曲线
+    st.markdown('***')
     chart_data5 = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/shannon curve5.csv', usecols=[1, 2, 3]))
     show5 = st.checkbox(
@@ -81,6 +86,7 @@ with st.expander('Shannon Wiener Curve', expanded=1):
         chart_data5
 
     # A18的香农曲线
+    st.markdown('***')
     chart_data6 = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/shannon curve6.csv', usecols=[1, 2, 3]))
     show6 = st.checkbox(
@@ -91,6 +97,7 @@ with st.expander('Shannon Wiener Curve', expanded=1):
         chart_data6
 
     # A21的香农曲线
+    st.markdown('***')
     chart_data7 = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/shannon curve7.csv', usecols=[1, 2, 3]))
     show7 = st.checkbox(
@@ -116,6 +123,7 @@ with st.expander('Rarefaction Curve', expanded=1):
     st.write('')
 
     # A1-1的稀释性曲线
+    st.markdown('***')
     chart_data1a = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/rarefaction curve1.csv', usecols=[1, 2, 3]))
     show1a = st.checkbox(
@@ -126,6 +134,7 @@ with st.expander('Rarefaction Curve', expanded=1):
         chart_data1a
 
     # A4-1的稀释性曲线
+    st.markdown('***')
     chart_data2a = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/rarefaction curve2.csv', usecols=[1, 2, 3]))
     show2a = st.checkbox(
@@ -136,6 +145,7 @@ with st.expander('Rarefaction Curve', expanded=1):
         chart_data2a
 
     # A9-Z的稀释性曲线
+    st.markdown('***')
     chart_data3a = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/rarefaction curve3.csv', usecols=[1, 2, 3]))
     show3a = st.checkbox(
@@ -146,6 +156,7 @@ with st.expander('Rarefaction Curve', expanded=1):
         chart_data3a
 
     # A11的稀释性曲线
+    st.markdown('***')
     chart_data4a = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/rarefaction curve4.csv', usecols=[1, 2, 3]))
     show4a = st.checkbox(
@@ -156,6 +167,7 @@ with st.expander('Rarefaction Curve', expanded=1):
         chart_data4a
 
     # A15的稀释性曲线
+    st.markdown('***')
     chart_data5a = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/rarefaction curve5.csv', usecols=[1, 2, 3]))
     show5a = st.checkbox(
@@ -166,6 +178,7 @@ with st.expander('Rarefaction Curve', expanded=1):
         chart_data5a
 
     # A18的稀释性曲线
+    st.markdown('***')
     chart_data6a = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/rarefaction curve6.csv', usecols=[1, 2, 3]))
     show6a = st.checkbox(
@@ -175,7 +188,9 @@ with st.expander('Rarefaction Curve', expanded=1):
     if st.checkbox('Show dataframe of A18', key='6a'):  # 增加交互，可查询数据
         chart_data6a
 
+
     # A23的稀释性曲线
+    st.markdown('***')
     chart_data7a = pd.DataFrame(
         data=pd.read_csv(f'{os.path.dirname(__file__)}/rarefaction curve7.csv', usecols=[1, 2, 3]))
     show7a = st.checkbox(
@@ -199,8 +214,9 @@ with st.expander('Rank Abundance Curve', expanded=1):
     st.write('')
     st.write('')
 
+    st.markdown('***')
     chart_datara = pd.DataFrame(
-        data=pd.read_csv(f'{os.path.dirname(__file__)}/rank abundance curve1.csv', usecols=[1, 2, 3]))
+        data=pd.read_csv(f'{os.path.dirname(__file__)}/rank abundance curve1.csv', usecols=[1, 2]))
     showra = st.checkbox(
         "Here is the first picture of rarefaction curve,which is used to evaluate whether the sample size is sufficient.And it is referred to the samples")
     if showra:
