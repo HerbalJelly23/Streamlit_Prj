@@ -216,7 +216,7 @@ with st.expander('Rank Abundance Curve', expanded=1):
 
     st.markdown('***')
     chart_datara = pd.DataFrame(
-        data=pd.read_csv(f'{os.path.dirname(__file__)}/rank abundance curve1.csv', usecols=[1, 2]))
+        data=pd.read_csv(f'{os.path.dirname(__file__)}/rank abundance curve1.csv', usecols=[0, 1, 2]))
     showra = st.checkbox(
         "Here is the first picture of rarefaction curve,which is used to evaluate whether the sample size is sufficient.And it is referred to the samples")
     if showra:
