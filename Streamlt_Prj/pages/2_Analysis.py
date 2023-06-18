@@ -38,8 +38,8 @@ st.write(f'您当前处于该数据目录中:red[{data_dir_path}]')
 
 # 分析原理展示
 st.markdown('***')
+st.subheader('频率误差及波形失真度分析原理')
 with st.expander('频率误差及波形失真度分析原理'):
-    st.subheader('频率误差及波形失真度分析原理')
     st.markdown('#### :red[1.]频率误差分析原理')
     col1, col2 = st.columns(2)
     col1.markdown(
