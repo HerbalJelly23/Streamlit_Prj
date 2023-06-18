@@ -18,7 +18,8 @@ st.caption('This APP is provided with technical support by :blue[怕挂科的我
 st.markdown('***')
 st.subheader(':red[Shannon Wiener Curve]')
 with st.expander('Shannon Wiener Curve', expanded=1):
-    # 制作图表，并说明这是香农系数图，用于评估生物样本容量是否充足
+    st.markdown('***')
+# 制作图表，并说明这是香农系数图，用于评估生物样本容量是否充足
     st.write('')
     st.write('')
     st.write('')
@@ -106,10 +107,11 @@ with st.expander('Shannon Wiener Curve', expanded=1):
         st.line_chart(chart_data7)
     if st.checkbox('Show dataframe of A21', key='7'):
         chart_data7
-
+# 制作图表，并说明这是稀释性曲线，用于评估生物样本容量是否充足
 st.markdown('***')
 st.subheader(':red[Rarefaction Curve]')
 with st.expander('Rarefaction Curve', expanded=1):
+    st.markdown('***')
     # 设置7个样本的稀释性曲线（Rarefaction curve）
     st.write('')
     st.write('')
@@ -203,6 +205,7 @@ with st.expander('Rarefaction Curve', expanded=1):
 st.markdown('***')
 st.subheader(':red[Rank Abundance Curve]')
 with st.expander('Rank Abundance Curve', expanded=1):
+    st.markdown('***')
     st.write('')
     st.write('')
     st.write('')
@@ -224,11 +227,44 @@ with st.expander('Rank Abundance Curve', expanded=1):
     if st.checkbox('Show dataframe of ', key='8a'):  # 增加交互，可查询数据
         chart_datara
 
-    # 作出三个取样点的地图，并且随机分布数个取样点作为随机取样的模拟样例说明，三个地点分别是竹银、横山、白蕉。
-    chart_datazy = pd.DataFrame(
-        np.random.randn(20, 2) / [50, 50] + [22.22, 113.11],
-        columns=['lat', 'lon'])
-    st.map(chart_datazy)
-
+# 绘制三个水文站站点在地图中的位置，三个站点分别为横山、竹银、白蕉
 st.markdown('***')
-st.write(":red[streamlit] is an awesome new tool that helps to solve the problems quickly")
+st.subheader(':red[the position of HengShan hydrologic station]')
+with st.expander('the position of HengShan hydrologic station', expanded=1):
+    st.markdown('***')
+    chart_datahs = pd.read_csv(f'{os.path.dirname(__file__)}/HenShan.csv')
+    drawhs = st.checkbox("click here to check the position of HengShan hydrologic station", key='hs')
+    if drawhs:
+        st.map(chart_datahs)
+    st.markdown('***')
+    chart_datazy = pd.read_csv(f'{os.path.dirname(__file__)}/ZhuYin.csv')
+    drawzy = st.checkbox("click here to check the position of ZhuYin hydrologic station", key='zy')
+    if drawzy:
+        st.map(chart_datazy)
+    st.markdown('***')
+    chart_databj = pd.read_csv(f'{os.path.dirname(__file__)}/BaiJiao.csv')
+    drawbj = st.checkbox("click here to check the position of BaiJiao hydrologic station", key='bj')
+    if drawbj:
+        st.map(chart_databj)
+#作一点没有意义的颜文字和emoji，尝试一下丰富画面
+st.markdown('***')
+st.subheader(':red[Here are some emojis and a printed picture]')
+with st.expander('Here are some emojis and a printed picture', expanded=1):
+    st.markdown('***')
+    painting = st.checkbox("click here to show the emojis and picture", key='dr')
+    if painting:
+        st.markdown('***')
+        st.write("Here are some emojis and a printed picture")
+        st.caption(':sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses:')
+        st.text("&&&&&&&&&&&&／＞　　フ&&&")
+        st.text("&&&&&&&&&&&|  _　 _ | &")
+        st.text("&&&&&&&&&&／` ミ＿xノ&&&")
+        st.text("&&&&&&&&/　　　 　 |&&&&")
+        st.text("&&&&&&&/　 ヽ　　 ﾉ&&&&&")
+        st.text("&&&&&&│　　|　|　|&&&&&&")
+        st.text("&&／￣|　　 |　|　|&&&&&&")
+        st.text("&&| (￣ヽ＿_ヽ_)__)&&&&&")
+        st.text("&&＼二つ&&&&&&&&&&&&&&&&")
+        st.markdown('***')
+st.title("Thx 4 ur reading.Hope that these info and pictures can be of use to u readers")
+st.write(":red[Streamlit] is an awesome new tool that helps to solve the problems quickly")
