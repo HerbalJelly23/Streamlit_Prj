@@ -8,6 +8,12 @@ from pyecharts import options as opts
 import streamlit as st
 import streamlit.components.v1 as components
 
+st.set_page_config(
+    page_title="国内生产总值GDP数据可视化APP",  # 页面标题
+    page_icon="💴",  # icon
+    layout="centered",  # 页面布局
+    initial_sidebar_state="auto"  # 侧边栏
+)
 
 # streamlit交互
 # 设置网页标题
