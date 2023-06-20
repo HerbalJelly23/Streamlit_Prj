@@ -20,6 +20,7 @@ st.set_page_config(
 # streamlit交互
 # 设置网页标题
 st.title('通过Streamlit展示国内生产总值GDP的相关数据')
+st.caption('本APP由:blue[怕挂科的我，把Python能力点满就对了]提供技术支持')
 # #展示数据
 # 展示一级标题
 st.header('1. 国内生产总值GDP的数据展示')
