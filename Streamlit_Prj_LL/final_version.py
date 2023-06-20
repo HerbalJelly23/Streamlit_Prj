@@ -14,6 +14,8 @@ st.set_page_config(
     layout="centered",  # 页面布局
     initial_sidebar_state="auto"  # 侧边栏
 )
+# data_dir_path = os.path.dirname(__file__)
+# data_dir_path = data_dir_path.replace('\\', '/')
 
 # streamlit交互
 # 设置网页标题
@@ -21,7 +23,7 @@ st.title('通过Streamlit展示国内生产总值GDP的相关数据')
 # #展示数据
 # 展示一级标题
 st.header('1. 国内生产总值GDP的数据展示')
-data = pd.read_csv(f'{os.path.dirname(__file__)}\经济方面.csv', encoding='gb18030')
+data = pd.read_csv(f'{os.path.dirname(__file__)}经济方面.csv', encoding='gb18030')
 # print(data.head()) # 默认打出五行数据
 st.dataframe(data)
 
@@ -30,7 +32,7 @@ st.dataframe(data)
 st.header('2. 对获取的国内生产总值GDP相关的数据进行相关性分析')
 # st.pyplot(sns.heatmap(corr))
 
-image = Image.open(f'{os.path.dirname(__file__)}\corr.jpg')
+image = Image.open(f'{os.path.dirname(__file__)}corr.jpg')
 st.image(image, caption='国内生产总值GDP相关的数据进行相关性分析')
 st.text('同时我们猜测，国内生产总值GDP与时间是线性相关的')
 
@@ -39,23 +41,23 @@ st.header('3. 对获取的国内生产总值GDP数据使用LinearRegression、Ri
 # # 展示二级标题
 st.subheader('3.1 使用LinearRegression进行预测')
 
-image = Image.open(f'{os.path.dirname(__file__)}\LinearRegression().jpg')
+image = Image.open(f'{os.path.dirname(__file__)}LinearRegression().jpg')
 st.image(image, caption='LinearRegression')
 # # 展示二级标题
 st.subheader('3.2 使用Ridge进行预测')
 
-image = Image.open(f'{os.path.dirname(__file__)}\Ridge().jpg')
+image = Image.open(f'{os.path.dirname(__file__)}Ridge().jpg')
 st.image(image, caption='Ridge')
 # # 展示二级标题
 st.subheader('3.3 使用Lasso进行预测')
 
-image = Image.open(f'{os.path.dirname(__file__)}\Lasso().jpg')
+image = Image.open(f'{os.path.dirname(__file__)}Lasso().jpg')
 st.image(image, caption='Lasso')
 
 # 展示一级标题
 st.header('4. 对国内各省份生产总值GDP进行直观展示')
 st.subheader('4.1 国内各省份GDP数据')
-data = pd.read_csv(f'{os.path.dirname(__file__)}\province.csv', encoding='utf8')
+data = pd.read_csv(f'{os.path.dirname(__file__)}province.csv', encoding='utf8')
 # print(data.head()) # 默认打出五行数据
 st.dataframe(data)
 st.subheader('4.2 国内各省份GDP数据地图')
