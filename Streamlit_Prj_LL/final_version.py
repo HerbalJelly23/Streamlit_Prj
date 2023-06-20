@@ -64,7 +64,7 @@ st.subheader('4.2 国内各省份GDP数据地图')
 # 用province省份作图-可以实现，但怎么样和streamlit交互-不行还是要采用streamlit本身生态
 
 
-data3 = pd.read_csv('province.csv', encoding='utf8')
+data3 = pd.read_csv(f'{os.path.dirname(__file__)}\province.csv'.replace('\\', '/'), encoding='utf8')
 # print(data3)
 # 处理数据
 Year = '2022'
