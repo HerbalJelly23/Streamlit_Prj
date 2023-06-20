@@ -32,6 +32,11 @@ st.dataframe(data)
 st.header('2. 对获取的国内生产总值GDP相关的数据进行相关性分析')
 # st.pyplot(sns.heatmap(corr))
 
+# 处理数据
+chart_data = pd.DataFrame(
+data = pd.read_csv(f'{os.path.dirname(__file__)}\经济方面简略版.csv'.replace('\\', '/'),encoding='gb18030'),)
+st.line_chart(chart_data)
+
 image = Image.open(f'{os.path.dirname(__file__)}\corr.jpg'.replace('\\', '/'))
 st.image(image, caption='国内生产总值GDP相关的数据进行相关性分析')
 st.text('同时我们猜测，国内生产总值GDP与时间是线性相关的')
