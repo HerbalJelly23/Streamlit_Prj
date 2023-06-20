@@ -1,0 +1,9 @@
+requests
+pandas
+numpy
+streamlit==1.11.1
+matplotlib
+matplotlib.pyplot
+os
+pyecharts
+pyecharts.charts
