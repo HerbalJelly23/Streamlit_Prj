@@ -17,7 +17,7 @@ st.caption('本站由[:green[Herbal Jelly]](https://github.com/HerbalJelly23)提
 
 st.header('协会简介')
 with st.expander('点击以收起协会简介', expanded=1):
-    st.write(f'{}')
+    st.write(f'{os.path.dirname(os.path.abspath(__file__))}')
     home_header_image = Image.open('./pages/pic002.png')
     st.image(home_header_image, caption='')
 
