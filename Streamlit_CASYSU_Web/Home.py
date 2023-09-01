@@ -21,7 +21,7 @@ st.caption('本站由[:green[Herbal Jelly]](https://github.com/HerbalJelly23)提
 st.header('协会简介')
 with st.expander('点击以收起协会简介', expanded=1):
     home_header_image = Image.open('./pic001.png')
-    st.image(home_header_image, caption='Infinity')
+    st.image(home_header_image, caption='')
 
 
     st.subheader('协会性质')
@@ -129,3 +129,4 @@ with st.expander('点击以收起协会简介', expanded=1):
     '''
     st.markdown(content)
 
+st.header('[:green[进入车协招新页]](https://ca-sysu.streamlit.app/%E8%BD%A6%E5%8D%8F%E6%8B%9B%E6%96%B0)')

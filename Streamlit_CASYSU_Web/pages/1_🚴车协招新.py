@@ -27,3 +27,5 @@ st.header('车协招新QA简报')
 with st.expander('点击以收起QA简报', expanded=1):
     poster_qa_image = Image.open('./pic003.png')
     st.image(poster_qa_image, caption='')
+
+st.header('[:green[进入基础骑行手册]](https://ca-sysu.streamlit.app/%E2%80%8D%E5%9F%BA%E7%A1%80%E9%AA%91%E8%A1%8C%E6%89%8B%E5%86%8C)')

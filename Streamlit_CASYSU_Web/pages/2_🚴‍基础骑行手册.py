@@ -223,3 +223,5 @@ with st.sidebar:
         * [:green[须及时送往车店的故障]](%E2%80%8D基础骑行手册#sec3)  
     '''
     st.markdown(content, unsafe_allow_html=True)
+
+st.header('[:green[进入长途骑游分享]](https://ca-sysu.streamlit.app/%E2%80%8D%E9%95%BF%E9%80%94%E9%AA%91%E6%B8%B8%E5%88%86%E4%BA%AB)')
