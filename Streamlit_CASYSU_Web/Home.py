@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import os
 
 st.set_page_config(
     page_title="中大车协-宣传手册首页",  # 页面标题
