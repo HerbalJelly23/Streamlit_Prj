@@ -1,5 +1,8 @@
 import streamlit as st
 from PIL import Image
+import os
+
+os.chdir(os.path.dirname(__file__))
 
 st.set_page_config(
     page_title="中大车协-宣传招新",  # 页面标题
@@ -17,10 +20,10 @@ st.caption('本站由[:green[Herbal Jelly]](https://github.com/HerbalJelly23)提
 
 st.header('车协招新宣传海报')
 with st.expander('点击以收起宣传海报', expanded=1):
-    poster_image = Image.open('.\https://github.com/HerbalJelly23/Streamlit_Prj/blob/main/Streamlit_CASYSU_Web/pic002.png')
+    poster_image = Image.open('./pic002.png')
     st.image(poster_image, caption='')
 
 st.header('车协招新QA简报')
 with st.expander('点击以收起QA简报', expanded=1):
-    poster_qa_image = Image.open('https://github.com/HerbalJelly23/Streamlit_Prj/blob/main/Streamlit_CASYSU_Web/pic003.png')
+    poster_qa_image = Image.open('./pic003.png')
     st.image(poster_qa_image, caption='')
