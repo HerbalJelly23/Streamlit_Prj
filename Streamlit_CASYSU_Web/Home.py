@@ -17,7 +17,7 @@ st.caption('本站由[:green[Herbal Jelly]](https://github.com/HerbalJelly23)提
 
 st.header('协会简介')
 with st.expander('点击以收起协会简介', expanded=1):
-    home_header_image = Image.open('https://github.com/HerbalJelly23/Streamlit_Prj/blob/main/Streamlit_CASYSU_Web/pic001.png')
+    home_header_image = Image.open('./pages/pic002.png')
     st.image(home_header_image, caption='')
 
 
