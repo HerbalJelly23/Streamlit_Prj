@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 import os
 
+os.chdir(os.path.dirname(__file__))
+
 st.set_page_config(
     page_title="中大车协-宣传手册首页",  # 页面标题
     page_icon=":bicyclist:",  # icon
@@ -18,7 +20,7 @@ st.caption('本站由[:green[Herbal Jelly]](https://github.com/HerbalJelly23)提
 
 st.header('协会简介')
 with st.expander('点击以收起协会简介', expanded=1):
-    home_header_image = Image.open(f'{os.path.dirname(os.path.abspath(__file__))}\pic001.png')
+    home_header_image = Image.open('pic001.png')
     st.image(home_header_image, caption='')
 
 
