@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import webbrowser
 
 st.set_page_config(
     page_title="中大车协-基础骑行手册",  # 页面标题
@@ -47,7 +48,7 @@ content = '''
 '''
 st.markdown(content)
 
-with st.expander('点击以收起章节', expanded=1):
+with st.expander('中暑临床表现', expanded=0):
     content = '''
         :green[中暑临床表现]  
         根据我国《职业性中暑诊断标准》（GB11508-89），中暑分为先兆中暑、轻症中暑、重症中暑。  
@@ -66,7 +67,7 @@ with st.expander('点击以收起章节', expanded=1):
     '''
     st.markdown(content)
 
-with st.expander('点击以收起章节', expanded=1):
+with st.expander('中暑的治疗', expanded=0):
     content = '''
         :green[中暑的治疗]  
         1. 先兆中暑与轻症中暑的治疗
@@ -128,3 +129,12 @@ st.subheader('本文协作者')
 with st.expander('点击以展开章节', expanded=0):
     st.caption('胡润楠（2019届东校总会会长-起草）')
     st.caption('严志宇（2021届珠海分会会长-修订）')
+
+col1, col2, col3 = st.columns(3)
+if col1.button('Home-首页', use_container_width=True):
+    webbrowser.open('https://ca-sysu.streamlit.app', new=0, autoraise=True)
+if col2.button('车协招新', use_container_width=True):
+    webbrowser.open('https://ca-sysu.streamlit.app/%E8%BD%A6%E5%8D%8F%E6%8B%9B%E6%96%B0', new=0, autoraise=True)
+if col3.button('骑行手册', use_container_width=True):
+    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E5%9F%BA%E7%A1%80%E9%AA%91%E8%A1%8C%E6%89%8B%E5%86%8C', new=0, autoraise=True)
+    

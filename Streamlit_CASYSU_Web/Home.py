@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import os
+import webbrowser
 
 os.chdir(os.path.dirname(__file__))
 
@@ -22,7 +23,6 @@ st.header('协会简介')
 with st.expander('点击以收起协会简介', expanded=1):
     home_header_image = Image.open('./pic001.png')
     st.image(home_header_image, caption='')
-
 
     st.subheader('协会性质')
     content = '''
@@ -129,4 +129,11 @@ with st.expander('点击以收起协会简介', expanded=1):
     '''
     st.markdown(content)
 
-st.header('[:green[进入车协招新页]](https://ca-sysu.streamlit.app/%E8%BD%A6%E5%8D%8F%E6%8B%9B%E6%96%B0)')
+col1, col2, col3 = st.columns(3)
+if col1.button('车协招新', use_container_width=True):
+    webbrowser.open('https://ca-sysu.streamlit.app/%E8%BD%A6%E5%8D%8F%E6%8B%9B%E6%96%B0', new=0, autoraise=True)
+if col2.button('骑行手册', use_container_width=True):
+    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E5%9F%BA%E7%A1%80%E9%AA%91%E8%A1%8C%E6%89%8B%E5%86%8C', new=0, autoraise=True)
+if col3.button('骑游分享', use_container_width=True):
+    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E9%95%BF%E9%80%94%E9%AA%91%E6%B8%B8%E5%88%86%E4%BA%AB', new=0, autoraise=True)
+
