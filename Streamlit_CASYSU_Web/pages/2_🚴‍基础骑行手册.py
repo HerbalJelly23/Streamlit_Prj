@@ -225,10 +225,11 @@ with st.sidebar:
     '''
     st.markdown(content, unsafe_allow_html=True)
 
+st.markdown('***')
 col1, col2, col3 = st.columns(3)
 if col1.button('Home-首页', use_container_width=True):
-    webbrowser.open('https://ca-sysu.streamlit.app', new=0, autoraise=True)
+    webbrowser.open('https://ca-sysu.streamlit.app', new=2, autoraise=True)
 if col2.button('车协招新', use_container_width=True):
-    webbrowser.open('https://ca-sysu.streamlit.app/%E8%BD%A6%E5%8D%8F%E6%8B%9B%E6%96%B0', new=0, autoraise=True)
+    webbrowser.open('https://ca-sysu.streamlit.app/%E8%BD%A6%E5%8D%8F%E6%8B%9B%E6%96%B0', new=2, autoraise=True)
 if col3.button('骑游分享', use_container_width=True):
-    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E9%95%BF%E9%80%94%E9%AA%91%E6%B8%B8%E5%88%86%E4%BA%AB', new=0, autoraise=True)
+    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E9%95%BF%E9%80%94%E9%AA%91%E6%B8%B8%E5%88%86%E4%BA%AB', new=2, autoraise=True)

@@ -29,10 +29,11 @@ with st.expander('点击以收起QA简报', expanded=1):
     poster_qa_image = Image.open('./pic003.png')
     st.image(poster_qa_image, caption='')
 
+st.markdown('***')
 col1, col2, col3 = st.columns(3)
 if col1.button('Home-首页', use_container_width=True):
-    webbrowser.open('https://ca-sysu.streamlit.app', new=0, autoraise=True)
+    webbrowser.open('https://ca-sysu.streamlit.app', new=2, autoraise=True)
 if col2.button('骑行手册', use_container_width=True):
-    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E5%9F%BA%E7%A1%80%E9%AA%91%E8%A1%8C%E6%89%8B%E5%86%8C', new=0, autoraise=True)
+    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E5%9F%BA%E7%A1%80%E9%AA%91%E8%A1%8C%E6%89%8B%E5%86%8C', new=2, autoraise=True)
 if col3.button('骑游分享', use_container_width=True):
-    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E9%95%BF%E9%80%94%E9%AA%91%E6%B8%B8%E5%88%86%E4%BA%AB', new=0, autoraise=True)
+    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E9%95%BF%E9%80%94%E9%AA%91%E6%B8%B8%E5%88%86%E4%BA%AB', new=2, autoraise=True)

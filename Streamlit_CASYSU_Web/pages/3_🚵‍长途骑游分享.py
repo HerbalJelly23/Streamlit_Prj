@@ -130,11 +130,11 @@ with st.expander('点击以展开章节', expanded=0):
     st.caption('胡润楠（2019届东校总会会长-起草）')
     st.caption('严志宇（2021届珠海分会会长-修订）')
 
+st.markdown('***')
 col1, col2, col3 = st.columns(3)
 if col1.button('Home-首页', use_container_width=True):
-    webbrowser.open('https://ca-sysu.streamlit.app', new=0, autoraise=True)
+    webbrowser.open('https://ca-sysu.streamlit.app', new=2, autoraise=True)
 if col2.button('车协招新', use_container_width=True):
-    webbrowser.open('https://ca-sysu.streamlit.app/%E8%BD%A6%E5%8D%8F%E6%8B%9B%E6%96%B0', new=0, autoraise=True)
+    webbrowser.open('https://ca-sysu.streamlit.app/%E8%BD%A6%E5%8D%8F%E6%8B%9B%E6%96%B0', new=2, autoraise=True)
 if col3.button('骑行手册', use_container_width=True):
-    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E5%9F%BA%E7%A1%80%E9%AA%91%E8%A1%8C%E6%89%8B%E5%86%8C', new=0, autoraise=True)
-    
+    webbrowser.open('https://ca-sysu.streamlit.app/%E2%80%8D%E5%9F%BA%E7%A1%80%E9%AA%91%E8%A1%8C%E6%89%8B%E5%86%8C', new=2, autoraise=True)
