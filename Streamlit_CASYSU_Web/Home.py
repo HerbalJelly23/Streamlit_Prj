@@ -15,7 +15,7 @@ st.set_page_config(
 # home_header_image = Image.open('pic001.png')
 # st.image(home_header_image, caption='')
 
-st.title('中山大学 Infinity 自行车协会')
+st.title('中山大学 Infinity 自行车协会', anchor='home')
 st.subheader(':green[用车轮托载梦想，以双手把握方向]')
 st.caption('本站由[:green[Herbal Jelly]](https://github.com/HerbalJelly23)提供技术支持')
 
